@@ -1,3 +1,274 @@
-body{
+body,html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: sans-serif;
     padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    
+}
+
+a {
+    color: #0056b3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #003366;
+    text-decoration: underline;
+}
+
+/* --- Navigation --- */
+.navbar {
+    display: flex;
+    gap: 50px;
+    background-color: #003366;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #a9b3c4;
+    text-decoration: none;
+}
+
+main{
+    padding: 20px;
+}
+
+/* --- Shared Section Styles --- */
+.about-section, .form-section {
+    padding: 50px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 40px;
+}
+
+/* group-section styles */
+.group-section {
+    border-radius: 10px;
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
+    background-color: #f3f4f5;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.group-section > img {
+    width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+/* --- Leadership Cards --- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    border: 1px solid #e1e8f5;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 51, 102, 0.1);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;  
+    margin: 0 auto 15px;
+    border: 3px solid #dce8ff;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.card .role {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* --- Contact Table --- */
+.table-section {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.contact-table th {
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 8px 8px 0 0;
+}
+
+.contact-table td {
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    padding: 20px;
+}
+
+.contact-table td strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #003366;
+    margin-bottom: 7px;
+}
+
+/* --- Form Styles --- */
+.form-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label, .label-title {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #003366;
+    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+}
+
+.radio-group label,
+.interest-list label {
+    align-items: center;
+    font-weight: normal;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.radio-group input,
+.interest-list input {
+    margin-right: 6px;
+}
+
+.interest-list {
+    list-style: none;
+    padding: 0;
+}
+
+.interest-list li {
+    margin-bottom: 8px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s,;
+}
+
+.btn-primary {
+    background-color: #003366;
+    color: white;
+    flex: 1; 
+}
+
+.btn-primary:hover {
+    background-color: #002244;
+}
+
+.btn-secondary {
+    background-color: #e1e8f5;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #c5d4ed;
+}
+
+/* --- Back to Top --- */
+.back-to-top {
+    text-align: center;
+    margin: 20px 0 50px;
+}
+
+.back-to-top a {
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #e1e8f5;
+    border-radius: 20px;
+}
+
+.back-to-top a:hover {
+    background: #c5d4ed;
+    text-decoration: none;
 }
