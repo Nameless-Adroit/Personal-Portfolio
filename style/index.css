@@ -44,7 +44,7 @@ a:hover {
 }
 
 main{
-    padding: 20px;
+    padding: 10px;
 }
 
 /* --- Shared Section Styles --- */
@@ -124,8 +124,9 @@ main{
 .table-section {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
+    font-size: 0.8rem;
 }
 .contact-table {
     width: 100%;
