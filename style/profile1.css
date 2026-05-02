@@ -1,3 +1,88 @@
+html, body{
+    scroll-behavior: smooth;
+}
+
 body{
+    margin: 0;
     padding: 0;
+    background-color: rgb(241, 204, 204);
+}
+main{
+    margin: 0 40px 20px 40px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    line-height: 1.7;
+
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(203, 203, 243);
+    margin: 0;
+    padding : 30px;
+    font-weight: bolder;
+    font-size: 1.2rem;
+
+}
+ a:hover{
+    color:black;
+    text-decoration: underline;
+
+}
+h2{
+    border-bottom:2px solid #333;
+}
+h1{
+    text-align: center;
+}
+p{
+    font-size: 17px;
+}
+ul,ol{
+    margin-left: 15px;
+}
+table{
+    bottom: 2px solid #333;
+    border-collapse: collapse;
+    margin-top: 11px;
+    width: 100%;
+}
+th{
+    background-color: #323232;
+    border: #323232 solid 2px;
+    color: white;
+    text-align: center;
+}
+td{
+    padding: 12px;
+    text-align: left;
+    border: 2px solid #333;
+}
+a{
+    color:blue;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    
+}
+img{
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.back-to-top {
+    text-align: center;
+    margin: 20px 0 50px;
+}
+
+.back-to-top a {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: rgb(225, 180, 180);
+    border-radius: 10px;
+}
+
+.back-to-top a:hover {
+    background: #8c5263;
+    text-decoration: none;
 }
