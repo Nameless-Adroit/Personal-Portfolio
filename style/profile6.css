@@ -12,11 +12,13 @@ a{
 
 /* navigation bar */
 nav{
+    position: fixed;
+    top: 0; left: 0; right: 0;
     display: flex;
     justify-content: space-around;
     background-color:rgb(247, 247, 247) ;
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 nav>a{
@@ -103,6 +105,16 @@ table{
     width: 80%;
     max-width: 700px;
 }
+
+tr{
+    transition: 0.3s ease all;
+}
+tr:hover{ 
+    background-color: rgba(208, 94, 45, 0.768);
+    color: rgb(39, 38, 38);
+    cursor: pointer;
+}
+
 /* Hobbies and interests section */
 
 #interests{ 
@@ -130,7 +142,14 @@ table{
     margin: 10px 0;
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px rgb(27, 24, 24);
+    box-shadow: 2px 12px 40px rgba(23, 25, 24, 0.08);
+    transition: 0.3s ease all;
+}
+
+.interests-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 1px 1px 1px rgb(66, 63, 63);
+   
 }
 
 .interests-card > img{

@@ -1,3 +1,324 @@
-body{
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: lightgrey;
+    scroll-behavior: smooth;
+    scroll-padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url('../images/background2.jpeg');
+    background-size: cover;
+    /* fills screen */
+    background-position: center;
+    /* keeps it centered */
+    background-repeat: no-repeat;
+    /* no tiling */
+}
+
+h1 {
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: none;
+    text-align: center;
+    background-color: azure;
+    border-radius: 10px;
+}
+
+h3 {
+    color: white;
+}
+
+strong {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+p {
+    font-size: 13pt;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.4s;
+    padding: 10px;
+    animation-timing-function: ease;
+
+}
+
+a img {
+    display: block;
+}
+
+a {
+    display: inline-block;
+    border-radius: 15px;
+    /* curved edges */
+    overflow: hidden;
+    /* forces child (image/background) to respect curve */
+}
+
+a:hover {
+    background-color: lightgrey;
+    transform: translateY(-5px) scale(1.06);
+}
+
+
+
+img {
+    border-radius: 20px;
+    padding: 10px;
+    align-content: center;
+}
+
+
+h3,
+h2 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    /* puts items side by side */
+    gap: 20px;
+    /* space between boxes */
+    padding: 20px;
+}
+
+/* LEFT BOX */
+.left-box {
+    flex: 3;
+    /* takes more space */
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    margin-left: 30px;
+    transition: 0.4s;
+
+}
+
+.bio-img {
+    width: 250px;
+    /* control size */
+    height: 320px;
+    object-fit: cover;
+    /* keeps image from stretching */
+    border-radius: 15px;
+    /* curved edges */
+}
+
+
+
+.bio-text {
+    flex: 1;
+}
+
+.left-box:hover {
+    display: flex;
+    transform: translateY(-5px) scale(1.06);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* RIGHT BOX */
+.right-box {
+    flex: 1;
+    /* smaller column */
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.4s;
+
+}
+
+/* NAV LINKS STACKED */
+.right-box a {
+    /* makes links vertical */
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    display: inline-block;
+
+}
+
+.right-box a:hover {
+    color: lightcyan;
+    border-radius: 10px;
+
+}
+
+.skills {
+    display: flex;
+    /* puts items side by side */
+    gap: 20px;
+    /* space between boxes */
+    list-style: none;
+    /* removes numbers */
     padding: 0;
+
+}
+
+
+/* Each item becomes a box */
+.skills li {
+    flex: 1;
+    /* all boxes equal width */
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Optional: style inner list */
+.skills li ul {
+    padding-left: 20px;
+}
+
+.skills li {
+    transition: 0.3s;
+}
+
+.skills li:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+}
+
+.edu-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* removes gaps */
+    margin: top 10px;
+    ;
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    /* keeps rounded corners clean */
+}
+
+.edu-table th {
+    background-color: #333;
+    padding: 15px;
+    text-align: center;
+}
+
+.edu-table th {
+    background-color: #333;
+    padding: 15px;
+    text-align: left;
+}
+
+.edu-table tr {
+    border-bottom: 5px solid #444;
+}
+
+.edu-table tr:hover {
+    background-color: #2a2a2a;
+    transition: 0.3s;
+}
+
+.edu-table tr:nth-child(even) {
+    background-color: #252525;
+}
+
+.edu-table {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.interests {
+    display: flex;
+    /* side by side */
+    gap: 20px;
+    padding: 0;
+}
+
+/* Each item becomes a box */
+.interests li {
+    flex: 1;
+    /* equal width */
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.4s;
+    list-style-type: none;
+}
+
+.interests li:hover {
+    transform: translateY(-5px) scale(1.06);
+    background-color: none;
+
+}
+
+.links {
+    display: flex;
+    /* side by side */
+    gap: 20px;
+    padding: 10px;
+
+}
+
+/* Each link becomes a box */
+.links li {
+    flex: 2;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    list-style-type: none;
+    transition: 0.4s;
+    /* NEW */
+    justify-content: center;
+    /* horizontal center */
+    align-items: center;
+    /* vertical center */
+
+}
+
+.links li:hover {
+    transform: translateY(-5px) scale(1.05);
+
+}
+
+/* Style links */
+.links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px
+}
+
+.links a:hover {
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.back-top {
+    text-align: center;
+    /* centers horizontally */
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.back-top a:hover {
+    background-color: #1e1e1e;
+    color: black;
+    transition: 0.3s;
+    border-radius: 15px;
 }
