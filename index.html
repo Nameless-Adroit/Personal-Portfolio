@@ -12,16 +12,18 @@
         <a href="#members" class="nav-link">Members</a>
         <a href="#contact" class="nav-link">Contact</a>
         <a href="#form" class="nav-link">Form</a>
+        <span id = "nav-time" class = "nav-time"></span>
     </nav>
     <main>
+        <div class = "welcome-message" id = "welcomeMessage"></div>
         <h1>Student Portfolio Website</h1>
+        
         <h4>IS 181 Web programming from the University of Dar es Salaam.</h4>
 
         <section class = "group-section">
              <img src="images/Group.jpeg" alt="Group Photo">
         <h4>Group GH.</h4>
         <p>
-            <h3>WELCOME</h3>
             <p>Below is a crew of members who have effectively participated in making this possible. 
             Their hardwork and passion is what drives them foward and it is what has made this work possible.</p>
         </section>
@@ -147,28 +149,32 @@
         <!-- Feedback Form -->
         <section class="form-section" id="form">
             <h2 class="section-title">Get in Touch</h2>
-            <form action="#" class="contact-form">
+            <form action="#" class="contact-form" novalidate>
                 <div class="form-group">
                     <input type="text" id="name" placeholder="" required>
                     <label for="name">Name</label>
                 </div>
+                 <span class="error-message" id="nameError"></span>
                 
                 <div class="form-group">
                     <input type="email" id="email" placeholder = "" required>
                     <label for="email">Email</label>
                 </div>
+                <span class="error-message" id="emailError"></span>
                 
                 <div class="form-group">
                     <textarea name="message" id="message" rows="4" placeholder="" required></textarea>
                     <label for="message">Message</label>
                 </div>
+                <span class="error-message" id="messageError"></span>
                 
                 <div class="radio-group">
                     <p class="label-title">Gender:</p>
-                    <label for="male"><input type="radio" name="sex" id="male"> Male</label>
-                    <label for="female"><input type="radio" name="sex" id="female"> Female</label>
+                    <label for="male"><input type="radio" name="gender" id="male"> Male</label>
+                    <label for="female"><input type="radio" name="gender" id="female"> Female</label>
                 </div>
-                
+                <span class="error-message" id="genderError"></span>
+
                 <div class="form-group-SELECT">
                     <label for="programme">Programme:</label>
                     <select name="Programme" id="programme">
@@ -179,7 +185,7 @@
                 </div>
                 
                 <div class="checkbox-group">
-                    <p class="label-title">Interests:</p>
+                    <p class="label-title">Interests(optional):</p>
                     <ul class="interest-list">
                         <li><label for="sports"><input type="checkbox" id="sports"> Sports</label></li>
                         <li><label for="music"><input type="checkbox" id="music"> Music</label></li>
@@ -189,7 +195,7 @@
                 </div>
                 
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="btnSubmit">Submit</button>
                     <button type="reset" class="btn btn-secondary">Reset</button>
                 </div>
             </form>

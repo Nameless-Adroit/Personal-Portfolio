@@ -25,6 +25,7 @@ a:hover {
 /* --- Navigation --- */
 .navbar {
     display: flex;
+    justify-content: space-between;
     gap: 50px;
     background-color: #003366;
     padding: 15px 30px;
@@ -34,7 +35,7 @@ a:hover {
     top: 0;
     left: 0;
     right: 0;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .nav-link {
@@ -44,6 +45,13 @@ a:hover {
     text-decoration: none;
 }
 
+.nav-time{
+    color:#ccc;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
 .nav-link:hover {
     color: #a9b3c4;
     text-decoration: none;
@@ -51,6 +59,15 @@ a:hover {
 
 main{
     padding: 10px;
+    margin-top: 70px;
+}
+
+.welcome-message{
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 3px;
+    color: rgb(29, 55, 75);
 }
 
 /* --- Shared Section Styles --- */
@@ -182,7 +199,7 @@ main{
 }
 
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     position: relative;
 }
 
@@ -240,7 +257,7 @@ main{
     display: block;
 }
 
-.radio-group, .checkbox-group, .form-group-SELECT {
+.checkbox-group, .form-group-SELECT {
     margin-bottom: 25px;
 }
 
@@ -268,6 +285,15 @@ main{
 
 .interest-list li {
     margin-bottom: 10px;
+}
+
+/* --- Error Messages --- */
+.error-message {
+    color: #d9534f;
+    font-size: 0.7rem;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display: block;
 }
 
 /* --- Buttons --- */
