@@ -2,8 +2,8 @@ body,html{
     scroll-behavior: smooth;
     scroll-padding-top: 70px;
     margin: 0;
+    transition: background-color 0.5s ease, color 0.3s ease;
     background-color: rgb(237, 237, 237);
-    
 }
 
 a{
@@ -16,11 +16,13 @@ nav{
     z-index: 100;
     top: 0; left: 0; right: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     background-color:rgb(247, 247, 247) ;
     margin: 0;
     font-size: 1.3rem;
     border-bottom: solid 1px rgb(158, 158, 158);
+    transition: background-color 0.5s ease, color 0.3s ease;
 }
 
 nav>a{
@@ -38,7 +40,53 @@ nav:active{
     font-size: 1.5rem;
 }
 
+/*toggle switch for button and white*/
+.switch {
+    margin-top: 10px;
+    position: relative;
+    width: 60px;
+    height: 34px; 
+}
 
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: grey;
+    border-radius: 34px;
+    transition: .4s;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 34px;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: black;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+/* header elements */
 h1{
     font-weight: bolder;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -278,6 +326,33 @@ footer{
     }
 }
 
+/*Dark mode*/
+body.dark-mode {
+    background-color: rgb(34, 33, 33);
+    color: white;
+}
 
+body.dark-mode nav {
+    background-color: rgb(36, 35, 35);
+    color: white;
+}
 
+body.dark-mode .myContent{
+    background-color: #201f1f;
+    color: rgb(123, 112, 95);
+}
+
+body.dark-mode tr:nth-child(even){
+    background-color: rgb(71, 68, 74);
+}
+
+body.dark-mode #interests{ 
+    color: rgb(145, 142, 142);
+}
+
+body.dark-mode .interests-card{
+    background-color: rgb(74, 74, 70);
+    color: rgb(177, 191, 191);
+    box-shadow: 2px 12px 40px rgb(206, 221, 216,);
+}
 
