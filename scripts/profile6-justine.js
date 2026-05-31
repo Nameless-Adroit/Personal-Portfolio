@@ -132,3 +132,25 @@ lightbox.addEventListener('click',(event)=>{
         lightboxImg.src = '';
     }
 });
+
+// What it does: hobby descriptions are cut. Clicking "Read More" expands them; clicking again collapses them back.             
+
+let readMoreBtns = document.querySelectorAll('.read-more-btn');
+
+readMoreBtns.forEach(function(btn) {
+
+    btn.addEventListener('click', function() {
+
+        let para = this.previousElementSibling;
+
+        if (para.classList.contains('clamped')) {
+            para.classList.remove('clamped');
+            this.textContent = 'Read Less';   // update button label
+
+        } else {
+
+            para.classList.add('clamped');
+            this.textContent = 'Read More';   // update button label
+        }
+    });
+});
