@@ -90,7 +90,8 @@
         <!-- SECTION 3: EDUCATION BACKGROUND -->
          <section>
             <h2 id="education">Education Background</h2>
-            <table class = "ed-table">
+             <button id="ascendingSortBtn"class = "sortBtn">Ascending🔼</button><button id="descendingSortBtn" class = "sortBtn">Descending🔽</button>
+            <table class = "ed-table" id = "ed-table">
                 <tr>
                     <th> Educational Level</th>
                     <th>School</th>
@@ -120,6 +121,22 @@
             <hr>
         </section>
 
+         <!-- PHOTO GALLERY (more lightbox triggers) -->
+        <section class="card">
+            <h2>Gallery</h2>
+            <p class="section-hint">Click any photo to view it full size ↓</p>
+            <div class="gallery">
+                <img src="../images/mwala.jpeg"  alt="my photo 1" class="lightbox-trigger">
+                <img src="../images/mwala2.jpeg" alt="my photo 2" class="lightbox-trigger">
+                <img src="../images/mwala3.jpeg" alt="my photo 3" class="lightbox-trigger">
+            </div>
+        </section>
+        <!-- LIGHTBOX OVERLAY -->
+        <div id="lightbox" class="lightbox-overlay">
+            <button id="lightboxClose" class="lightbox-close">✕</button>
+            <img id="lightboxImg" src="" alt="Full size image">
+        </div>
+
         <!-- SECTION 4: HOBBIES AND INTERESTS -->
         <h2 id="interests">Hobbies and Interests</h2>
         <section class="interests">
@@ -140,6 +157,10 @@
                 Exploring more on other Science disciplines such as Physics and Mathematics.
             </div>
         </section>
+
+        <div class = "scroll-up">
+            <button id="scrollToTop" class="scrollToTop hidden">To Top</button>
+        </div>
        
     </main>
   <!-- Simple footer with contact info -->

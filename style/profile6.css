@@ -233,6 +233,85 @@ tr:hover{
     cursor: pointer;
 }
 
+/* Sort buttons */
+.sortBtn{
+    border: none;
+    margin: 5px;
+    background-color: rgb(80, 71, 71);
+    border-radius: 5px;
+    padding: 8px 12px;
+    color: white;
+}
+
+.sortBtn:hover{
+    background-color: rgb(80, 71, 71, 0.8);
+}
+.sortBtn:active{
+    background-color: rgb(115, 131, 131);
+}
+
+.hidden{
+    display: none;
+}
+
+
+/*  10. GALLERY  */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.gallery img {
+    width: 70%;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 20px rgba(196, 97, 127, 0.2);
+}
+
+/* 12. LIGHTBOX OVERLAY */
+.lightbox-overlay {
+    display: none;               /* hidden until JS opens it */
+    position: fixed;
+    inset: 0;
+    background: rgba(49, 49, 49, 0.88);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    border: none;
+    color: #625d5d;
+    font-size: 1.4rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.lightbox-close:hover {
+     background: rgb(0, 0, 0); 
+}
+
 /* Hobbies and interests section */
 
 #interests{ 
@@ -283,6 +362,30 @@ tr:hover{
     text-align: center;
     font-size: 1.2rem;
     margin: 10px 0;
+}
+
+/* Scroll to top */  
+.scrollToTop{
+    font-size: 1.2rem;
+    position: fixed;
+    z-index: 999;
+    right: 25px;
+    bottom: 20px;
+    padding: 5px;
+    border: none;
+    border-radius: 10%;
+    background-color: rgb(182, 206, 147);
+    box-shadow: 2px 2px 5px rgb(110, 76, 76);
+    transition: all 0.3s ease ;
+    behavior: smooth;
+}
+
+.scrollToTop:hover{
+    transform: scale(1.1);
+}
+
+.scrollToTop:active{
+    transform: scale(0.95);
 }
 /* Footer elements */
 footer{
