@@ -25,13 +25,10 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: none;
     text-align: center;
-    background-color: azure;
+    background-color: #1e1e1e;
     border-radius: 10px;
-}
-
-h3 {
     color: white;
-}
+    padding: 10px;}
 
 strong {
     font-family: Arial, Helvetica, sans-serif;
@@ -49,11 +46,10 @@ a {
     transition: 0.4s;
     padding: 10px;
     animation-timing-function: ease;
-
 }
 
 a img {
-    display: block;
+    display: flex;
 }
 
 a {
@@ -70,18 +66,12 @@ a:hover {
 }
 
 
-
 img {
     border-radius: 20px;
     padding: 10px;
     align-content: center;
 }
 
-
-h3,
-h2 {
-    text-align: center;
-}
 
 .container {
     display: flex;
@@ -93,7 +83,7 @@ h2 {
 
 /* LEFT BOX */
 .left-box {
-    flex: 3;
+    display: flex;
     /* takes more space */
     background-color: #1e1e1e;
     color: white;
@@ -106,19 +96,17 @@ h2 {
 }
 
 .bio-img {
-    width: 250px;
+    width: 270px;
     /* control size */
-    height: 320px;
+    height: 425 px;
     object-fit: cover;
     /* keeps image from stretching */
     border-radius: 15px;
     /* curved edges */
 }
 
-
-
 .bio-text {
-    flex: 1;
+    flex: 2;
 }
 
 .left-box:hover {
@@ -152,31 +140,73 @@ h2 {
 }
 
 .right-box a:hover {
-    color: lightcyan;
+    color: grey;
     border-radius: 10px;
-
 }
 
 .skills {
     display: flex;
-    /* puts items side by side */
     gap: 20px;
-    /* space between boxes */
     list-style: none;
-    /* removes numbers */
     padding: 0;
+    align-items: flex-start;
+    /* when one boxes stretches when clicking it to expand it doesnt affect the others*/
+}
+
+/* Style the nested lists inside cleanly so they don't look like boxes */
+.skills-details ul {
+    padding-left: 20px;
+    margin-top: 10px;
+    list-style-type: square;
 
 }
 
+.skills-details li {
+    background: none !important;
+    /* Prevents nested items from turning into black boxes */
+    padding: 5px 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* The hidden utility class */
+.is-hidden {
+    display: none !important;
+}
 
 /* Each item becomes a box */
 .skills li {
     flex: 1;
-    /* all boxes equal width */
+    /* puts the boxes or cards side by side with an equal width of 1 */
     background-color: #1e1e1e;
+    /* the background color of the boxes or cards with the text in front of them*/
     color: white;
     padding: 20px;
     border-radius: 15px;
+    transition: 0.3s;
+}
+
+
+.skills li:hover::after {
+    content: "▼";
+    /* The arrow symbol */
+    position: absolute;
+    /* Position it relative to the list item */
+    top: 20px;
+    right: 20px;
+    font-size: 0.8em;
+    color: grey;
+    /* Subtle grey color so it's not distracting */
+    transition: transform 0.3s ease;
+    /* Smooth spin animation */
+}
+
+/* 2. When the box has the 'expanded' class, flip the arrow and make it bright */
+.skills li.expanded::after {
+    content: "▲";
+    transform: rotate(360deg);
+    color: grey;
+
 }
 
 /* Optional: style inner list */
@@ -184,9 +214,6 @@ h2 {
     padding-left: 20px;
 }
 
-.skills li {
-    transition: 0.3s;
-}
 
 .skills li:hover {
     transform: translateY(-5px) scale(1.05);
@@ -197,14 +224,11 @@ h2 {
 .edu-table {
     width: 100%;
     border-collapse: collapse;
-    /* removes gaps */
     margin: top 10px;
-    ;
     background-color: #1e1e1e;
     color: white;
     border-radius: 15px;
     overflow: hidden;
-    /* keeps rounded corners clean */
 }
 
 .edu-table th {
@@ -236,11 +260,14 @@ h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+
 .interests {
     display: flex;
-    /* side by side */
+    /*puts the cards side by side */
     gap: 20px;
+    /* space between the cards*/
     padding: 0;
+    align-items: flex-start;
 }
 
 /* Each item becomes a box */
@@ -253,12 +280,11 @@ h2 {
     border-radius: 15px;
     transition: 0.4s;
     list-style-type: none;
+
 }
 
 .interests li:hover {
     transform: translateY(-5px) scale(1.06);
-    background-color: none;
-
 }
 
 .links {
@@ -279,17 +305,11 @@ h2 {
     text-align: center;
     display: flex;
     list-style-type: none;
-    transition: 0.4s;
     /* NEW */
     justify-content: center;
     /* horizontal center */
     align-items: center;
     /* vertical center */
-
-}
-
-.links li:hover {
-    transform: translateY(-5px) scale(1.05);
 
 }
 
@@ -306,6 +326,7 @@ h2 {
 .links a:hover {
     text-decoration: none;
     border-radius: 15px;
+    background-color: grey;
 }
 
 .back-top {
@@ -321,4 +342,187 @@ h2 {
     color: black;
     transition: 0.3s;
     border-radius: 15px;
+}
+
+/*CHANGES I MADE*/
+
+
+/* Style for the clickable header */
+#sort-year-btn:hover {
+    background-color: #444;
+    scale: 1.08;
+
+
+}
+
+/* Optional: Add a subtle transition */
+#sort-year-btn {
+    transition: 0.3s ease;
+}
+
+/* Scroll to Top Button Styling */
+#scrollToTopBtn {
+    position: fixed;
+    /* Stays in the same spot on the screen */
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 15px;
+    background-color: rgba(30, 30, 30, 0.7);
+    /* Matches your theme */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    /* Ensures it stays on top of everything else */
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+}
+
+/* Hover effect */
+#scrollToTopBtn:hover {
+    background-color: #333;
+}
+
+/* The class we will toggle with JavaScript to show/hide it */
+#scrollToTopBtn.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Container for the text - limited to 2 lines */
+.read-more-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* The magic number */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+/* When expanded, show all lines */
+.read-more-text.expanded {
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+}
+
+/* Style the button */
+.toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    /* Matches your theme */
+    cursor: pointer;
+    font-size: 0.9em;
+    text-decoration: underline;
+    padding: 0;
+}
+
+
+
+.lightbox-overlay {
+    display: none;               /* hidden until JS opens it */
+    position: fixed;
+    inset: 0;
+    background: rgba(49, 49, 49, 0.88);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    border: none;
+    color: #625d5d;
+    font-size: 1.4rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.lightbox-close:hover {
+     background: rgb(0, 0, 0); 
+}
+
+
+/* =========================================
+   LIGHT MODE OVERRIDES 
+   ========================================= */
+body.light-mode {
+    background-image: url('../images/background2.jpeg');
+    color: #111;
+}
+
+/* Flip all dark boxes and headers to white/light grey */
+body.light-mode h1,
+body.light-mode .left-box,
+body.light-mode .right-box,
+body.light-mode .skills li,
+body.light-mode .edu-table,
+body.light-mode .interests li,
+body.light-mode .links li {
+    background-color: #ffffff;
+    color: #111;
+}
+
+/* Adjust the table for light mode */
+body.light-mode .edu-table th {
+    background-color: #dee2e6;
+    color: #111;
+}
+body.light-mode .edu-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+body.light-mode .edu-table tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Fix link colors so they show up on white backgrounds */
+body.light-mode .right-box a,
+body.light-mode .links a,
+body.light-mode .toggle-btn {
+    color: #111;
+}
+body.light-mode .right-box a:hover,
+body.light-mode .links a:hover {
+    background-color: #dee2e6;
+}
+
+/* Styling for the toggle button itself */
+.theme-btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: 0.4s;
+}
+.theme-btn:hover {
+    background-color: white;
+    color: #1e1e1e;
+}
+
+/* How the button looks when light mode is active */
+body.light-mode .theme-btn {
+    border-color: #1e1e1e;
+    color: #1e1e1e;
+}
+body.light-mode .theme-btn:hover {
+    background-color: #1e1e1e;
+    color: white;
 }

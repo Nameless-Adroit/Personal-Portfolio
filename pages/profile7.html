@@ -6,11 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/profile7.css">
+
     <title>Lenis Magai</title>
 </head>
+<button id="scrollToTopBtn" class="hidden">Top ↑</button>
 
 <body>
-   
+
     <h1>Personal Portfolio</h1>
     <div class="container">
 
@@ -20,7 +22,7 @@
             <img src="../images/economy.jpeg" alt="me" class="bio-img">
             <p>Wassup Fellas. Names Lenis, friends call me Magai.Currently at the University of Dar es salaam studying
                 computer
-                science. <br><br>
+                science.<br><br>
 
                 What really intrigues me about tech is the business side of it building services or applications that
                 automate
@@ -44,11 +46,11 @@
                 <a href="../index.html">Home</a><br>
                 <a href="#contact" class="nav-link">Contact</a>
                 <a href="#skills">Skills</a>
-                <a href="#interests">Interests</a>
                 <a href="#background">Education</a>
-                <a href="#links">Favorite Links</a>
+                <a href="#interests">Interests</a>
                 <a href="#pics">Flicks</a>
-
+                <a href="#links">Favorite Links</a>
+                <button id="theme-toggle" class="theme-btn">☀️ Light Mode</button>
             </nav>
         </div>
 
@@ -56,22 +58,28 @@
     <h1 id="skills">Skills</h1>
     <ol class="skills">
         <li><strong>Programming & Web programming</strong>
-            <ul>
-                <li>C++</li>
-                <li>HTML</li>
-
-            </ul>
+            <div class="skills-details">
+                <ul>
+                    <li>C++</li>
+                    <li>HTML</li>
+                </ul>
+            </div>
         </li>
         <li><strong>business</strong>
-            <ul>
-                <li>procurement work</li>
-                <li>admin work</li>
-            </ul>
+            <div class="skills-details">
+                <ul>
+                    <li>procurement work</li>
+                    <li>admin work</li>
+                </ul>
+            </div>
         </li>
         <li> <strong>doom scrolling</strong>
-            <ul>
-
-            </ul>
+            <div class="skills-details">
+                <ul>
+                    <li>Deep stash</li>
+                    <li>Sub stack</li>
+                </ul>
+            </div>
         </li>
     </ol>
 
@@ -81,7 +89,7 @@
         <tr>
             <th> Educational Level</th>
             <th>Institution</th>
-            <th>Time lapse</th>
+            <th id="sort-year-btn" style="cursor: pointer;">Time lapse ↕️</th>
         </tr>
         <tr>
             <td>Bachelors degree in Computer Science</td>
@@ -105,25 +113,43 @@
         </tr>
 
     </table>
-    <p>FYI never switched schools</p>
 
     <h1 id="interests">Interests & Pursuits</h1>
     <ul class="interests">
-        <li><strong>working out & sports:</strong> Love playing basketball, football in particular and going to the gym.
-            still working on that consistency tho haha</li>
-        <li><strong>Spontaneous adventures:</strong> Unplanned trips, trying new things and constantly living on the
-            edge you get the point</li>
-        <li><strong>Business:</strong> Building a business with broski FORBES 30 UNDER 30!!!</li>
+        <li>
+            <strong>working out & sports</strong><br><br>
+            <div class="read-more-text">Love playing basketball, football in particular and going to the gym. Still
+                working on that consistency though, haha. It's a journey, but it keeps me energized and clears my head
+                after a long day of coding.</div>
+            <button class="toggle-btn">More</button>
+        </li>
+        <li>
+            <strong>Spontaneous adventures</strong><br><br>
+            <div class="read-more-text">Unplanned trips, trying new things, and constantly living on the edge you get
+                the point. Whether it's a road trip to a random town or trying a new activity, I'm always down for it.
+            </div>
+            <button class="toggle-btn">More</button>
+        </li>
+        <li>
+            <strong>Business</strong><br><br>
+            <div class="read-more-text">Building a business with the bros. We are constantly exploring different market
+                gaps, learning the ropes of startup culture, and aiming for that Forbes 30 Under 30 spot!</div>
+            <button class="toggle-btn">More</button>
+        </li>
     </ul>
 
     <h1 id="pics">Flicks</h1>
-    <h3>glimpes of what my life looks like</h3>
 
-    <img src="../images/BROSKIS.jpeg" alt="with my Friends" width=450">
+    <img src="../images/BROSKIS.jpeg" alt="with my Friends" width="450" class="lightbox-trigger">
+
     <a class="image-link" href="https://www.instagram.com/backindacut_?igsh=MTBiaTNxMmVrbW84cA%3D%3D&utm_source=qr"
-            target="_blank">
+        target="_blank">
         <img src="../images/GLASSES.jpeg" alt="funny picture" width="370">
     </a>
+    <div id="lightbox" class="lightbox-overlay">
+        <button id="lightboxClose" class="lightbox-close">✕</button>
+        <img id="lightboxImg" src="" alt="Full size image">
+    </div>
 
     <h1 id="links">Favorite Links</h1>
     <ul class="links">
@@ -131,15 +157,13 @@
                     target="_blank">Spotify playlist</a></strong><br>
         </li>
         <li>
-            <p> <strong><a href="https://youtu.be/BLl3xREFEsY?si=0hmIdz6evvZID_YQ" target="_blank">fear of being average</a></p>
-                </strong><br>
+            <p> <strong><a href="https://youtu.be/BLl3xREFEsY?si=0hmIdz6evvZID_YQ" target="_blank">fear of being
+                        average</a></p>
+            </strong><br>
         </li>
     </ul>
-
-    <p class="back-top"><a href="#top">top</a></p>
-
-        <script src="../scripts/profile7-lenis.js" defer></script>
-
-
+    
+    <script src="../scripts/profile7-lenis.js" defer></script>
 </body>
+
 </html>
