@@ -26,22 +26,22 @@
         <p>i am passionate about learning how websites work and enjoy creating simple web pages using HTML</p>
 
         <h2 id="skills">My Skills</h2>
-        <ol>
+        <ol id="skillsList">
             <li>Web Development
-                <ul>
+                <ul class = "hidden">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
                 </ul>
             </li>
             <li>Programming Languages
-                <ul>
+                <ul class = "hidden">
                     <li>Java</li>
                     <li>C++</li>
                 </ul>
             </li>
             <li>Mathematics
-                <ul>
+                <ul class = "hidden">
                     <li>Calculus</li>
                     <li>Algebra</li>
                 </ul>
@@ -50,7 +50,8 @@
 
         <!-- This is a table pertaing my education background -->
         <h2 id="education">Education Background</h2>
-        <table>
+        <button id="sortEdu">Sort By Years</button>
+        <table id="educationTable">
             <tr>
                 <th> Educational Level</th>
                 <th>School</th>
@@ -81,10 +82,27 @@
         </table>
 
         <h2 id="hobbies">Hobbies and Interests</h2>
-        <ul>
-            <li><strong>Movies:</strong> i like learning new things.</li>
-            <li><strong>listening music:</strong> that is kind of refreshment to me.</li>
-            <li><strong>Continuous Learning:</strong> Exploring more on other Science disciplines such as Physics and Mathematics.</li>
+        <ul id="hobbiesList">
+            <li>
+                <strong>Movies:</strong> I really enjoy learning new things
+                <span class="dots">...</span>
+                <span class="more-text">especially through documentaries and sci-fi films.</span>
+                <button class="hobby-btn">Read More</button>
+            </li>
+    
+            <li>
+                <strong>Listening to Music:</strong> That is a kind of refreshment to me 
+                <span class="dots">...</span>
+                <span class="more-text">after a very long and tiring day.</span>
+                <button class="hobby-btn">Read More</button>
+            </li>
+    
+            <li>
+                <strong>Continuous Learning:</strong> Exploring more on other Science disciplines 
+                <span class="dots">...</span>
+                <span class="more-text">such as Physics and Mathematics to broaden my horizons.</span>
+                <button class="hobby-btn">Read More</button>
+            </li>
         </ul>
 
         <h2 id="gallery">Gallery</h2>

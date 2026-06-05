@@ -41,6 +41,10 @@ p{
 ul,ol{
     margin-left: 15px;
 }
+
+#skillsList{
+    cursor: pointer;
+}
 table{
     border: 2px solid #333;
     border-collapse: collapse;
@@ -83,7 +87,7 @@ img{
     text-align: center;
     font-weight: bold;
     padding: 10px 20px;
-    background-color: rgb(39, 36, 36);  /* dark */
+    background-color: rgb(39, 36, 36);
     color: white;
     border-radius: 10px;
     border: none;
@@ -135,24 +139,167 @@ img{
     cursor:pointer;
 }
 
-/* Scroll button */
-#scrollBtn{
-    display:none;
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    cursor:pointer;
-    text-align: center;
-    font-weight: bold;
-    padding: 10px 20px;
-    background-color: rgb(166, 120, 120);
-    border-radius: 10px;
-    border: none;
-    transition: all 0.3s ease;
+
+/* ========================= */
+/* DARK MODE SUPPORT */
+/* ========================= */
+
+.hidden {
+    display: none;
 }
 
-#scrollBtn:hover{
-    transform: scale(1.2);
+/* Dark mode background */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+/* Dark mode navigation */
+.dark-mode nav {
+    background-color: #444;
+}
+
+/* Dark mode links */
+.dark-mode a {
+    color: lightblue;
+}
+
+/* Dark mode table fix */
+.dark-mode table,
+.dark-mode td,
+.dark-mode th {
+    border-color: #777;
+}
+
+/* ========================= */
+/* BUTTON STYLES */
+/* ========================= */
+
+#darkModeBtn,
+#sortEdu {
+    cursor: pointer;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+/* Dark mode button */
+#darkModeBtn {
+    background-color: #333;
+    color: white;
+}
+
+/* Dark mode button active */
+#darkModeBtn.dark-mode-btn {
+    background-color: white;
+    color: black;
+}
+
+/* Sort button */
+#sortEdu {
+    background-color: #444;
+    color: white;
+    margin-top: 10px;
+}
+
+#darkModeBtn:hover,
+#sortEdu:hover {
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* HOBBY BUTTON */
+/* ========================= */
+#hobbiesList li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+.more-text {
+    display: none; 
+}
+
+.is-expanded .more-text {
+    display: inline;
+}
+.is-expanded .dots {
+    display: none;
+}
+
+.hobby-btn {
+    background: none;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 0;
+    margin-left: 8px;
+}
+
+.hobby-btn:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.dots {
+    color: #666;
+}
+
+/* ========================= */
+/* LIGHTBOX */
+/* ========================= */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ========================= */
+/* SCROLL BUTTON */
+/* ========================= */
+
+#scrollBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#scrollBtn:hover {
+    transform: scale(1.1);
 }
 
 #scrollBtn:active{
