@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset=UTF-8>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ester Kabuka — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style/profile3.css">
-  <title>ESTER KABUKA</title>
 </head>
-<body id="top">
-  <div class="orb orb-1"></div>
+ <body class="dark-mode"> <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
 
   <nav>
-    <a href="../index.html">Home</a>
+    <a href="#top">Home</a>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
     <a href="#interests">Interests</a>
     <a href="#contact">Contact</a>
+    <button id="dark-mode-toggle" class="btn-toggle">Dark Mode</button>
   </nav>
 
   <main id="top">
 
-    <!-- Hero -->
     <section>
       <div class="hero">
         <div>
@@ -39,7 +38,6 @@
       </div>
     </section>
 
-    <!-- About -->
     <section id="about">
       <p class="section-label">01 — About</p>
       <h2>About Me</h2>
@@ -50,50 +48,68 @@
       </div>
     </section>
 
-    <!-- Skills -->
     <section id="skills">
       <p class="section-label">02 — Skills</p>
       <h2>My Skills</h2>
+      <p style="color: var(--muted); margin-bottom: 15px; font-size: 0.9rem;"> Click a card to see specific details.</p>
       <div class="skills-grid">
         <div class="skill-card">
           <div class="skill-label">Programming Languages</div>
           <div class="skill-list">Java · JavaScript · C</div>
+          <div class="skill-details hidden">
+            Object-Oriented Design, dynamic scripting, and system level application tracking.
+          </div>
         </div>
         <div class="skill-card">
           <div class="skill-label">Web Development</div>
           <div class="skill-list">HTML · CSS · JavaScript</div>
+          <div class="skill-details hidden">
+            Building responsive, dynamic frontend platforms using CSS Grid, Flexbox, and native DOM API interactions.
+          </div>
         </div>
         <div class="skill-card">
           <div class="skill-label">Networking</div>
           <div class="skill-list">TCP/IP · IP Addressing · Network Configuration</div>
+          <div class="skill-details hidden">
+            Subnetting mapping architectures, routing protocol deployments, and structured infrastructure maintenance.
+          </div>
         </div>
         <div class="skill-card">
           <div class="skill-label">Tools</div>
           <div class="skill-list">Git · GitHub</div>
+          <div class="skill-details hidden">
+            Version control systems execution, remote branches collaboration workflows, and source tracking configurations.
+          </div>
         </div>
         <div class="skill-card">
           <div class="skill-label">Soft Skills</div>
           <div class="skill-list">Problem Solving · Teamwork · Critical Thinking</div>
+          <div class="skill-details hidden">
+            Analytical problem solving under agile workflows, systemic structural investigation, and cooperative solution development.
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Education -->
     <section id="education">
       <p class="section-label">03 — Education</p>
       <h2>Education Background</h2>
-      <table class="edu-table">
+      
+      <button id="sort-education-btn" class="btn-action">Sort by Year (Oldest to Newest)</button>
+      
+      <table id="education-table" class="edu-table">
         <thead>
-          <tr><th>Education Level</th>
+          <tr>
+            <th>Education Level</th>
             <th>School / Institution</th>
-            <th>Years</th></tr>
+            <th>Years</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
             <td>BSc in Computer Science</td>
             <td>University of Dar es Salaam</td>
-            <td><span class="badge">Currently Enrolled</span></td>
-          </tr>
+            <td><span class="badge">Currently enrolled</span></td> </tr>
           <tr>
             <td>Advanced Secondary</td>
             <td>Tabora Girls Secondary School</td>
@@ -113,7 +129,6 @@
       </table>
     </section>
 
-    <!-- Interests -->
     <section id="interests">
       <p class="section-label">04 — Interests</p>
       <h2>Interests</h2>
@@ -126,17 +141,14 @@
       </div>
     </section>
 
-    <!-- Links -->
     <section id="links">
       <p class="section-label">05 — Links</p>
       <h2>Find Me Online</h2>
       <div class="links-row">
-        <a class="link-btn" href="https://www.linkedin.com/in/ester-kabuka-0805b536b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
-        </a>
+        <a class="link-btn" href="https://www.linkedin.com/in/ester-kabuka-0805b536b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">View LinkedIn Profile →</a>
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
       <p class="section-label">06 — Contact</p>
       <h2>Get in Touch</h2>
@@ -165,19 +177,15 @@
     <p style="margin-top:8px;">&copy; 2026 Ester Kabuka. All rights reserved.</p>
 
     <div class="social-icons">
-
       <a href="https://github.com/esterkabuka89-source" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
       </a>
-
       <a href="https://www.linkedin.com/in/ester-kabuka-0805b536b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
       </a>
-
       <a href="https://www.instagram.com/fynsmiling?igsh=cGxnNnZmMWFuZ3B1" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
       </a>
-
     </div>
   </footer>
 
