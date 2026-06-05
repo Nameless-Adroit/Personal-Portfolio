@@ -1,9 +1,3 @@
-//creating time
-setInterval(() => {
-    let hour = new Date();
-    document.getElementsByClassName("time")[0].innerHTML =  hour.toLocaleTimeString();
-}, 1000);
-
 //for skills
 document.addEventListener("DOMContentLoaded", function() {
     // Select all container blocks for our interactive skills
@@ -140,24 +134,30 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-   const scrollTopBtn = document.getElementById("scrollToTopBtn");
- 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 200) {
-            scrollTopBtn.classList.add('show');
-        } else {
-            scrollTopBtn.classList.remove('show');
-        }
-    });
+const scrollTopBtn = document.getElementById("scrollToTopBtn");
 
-    // 3. Smooth scroll to top on click
-    scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth'
-        });
-    });
+scrollTopBtn.style.display = "none"; // Initially hide the button
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        scrollTopBtn.style.display = "block"; // Show button when scrolled down
+    } else {
+        scrollTopBtn.style.display = "none"; // Hide button when near top
+    }
 });
 
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        scrollTopBtn.classList.add('show');
+    } else {
+        scrollTopBtn.classList.remove('show');
+    }
+});
+
+// 3. Smooth scroll to top on click
+scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth'
+    });
+});
 
 const toggleBtn = document.getElementById('theme-toggle');
     
