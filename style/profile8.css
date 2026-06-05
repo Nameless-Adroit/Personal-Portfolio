@@ -1,126 +1,207 @@
-:root {
-  --bg:#9c07a7;
-  --card:#083247;
-  --border:#1e2d45;
-  --accent:#00e5c0;
-  --accent2:#5b8cff;
-  --text:#e8edf5;
+/* =========================
+   GLOBAL STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
 }
 
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-  font-family:'DM Sans',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
+body {
+  background: #f4f6f9;
+  color: #222;
+  transition: 0.3s;
 }
 
-/* ORBS */
-.orb{
-  position:fixed;
-  width:400px;height:400px;
-  border-radius:50%;
-  filter:blur(120px);
-  opacity:.3;
-  z-index:0;
-}
-.orb1{background:#00e5c0;top:-100px;left:-100px;}
-.orb2{background:#5b8cff;bottom:-100px;right:-100px;}
-
-/* NAV */
-nav{
-  position:fixed;
-  z-index: 100;
-  width:100%;
-  padding:15px;
-  text-align:center;
-  background:rgba(0,0,0,.8);
-  backdrop-filter:blur(10px);
-}
-nav a{
-  margin:10px;
-  text-decoration:none;
-  color:var(--text);
-}
-nav a:hover{color:var(--accent);}
-
-/* MAIN */
-main{padding:100px 20px;position:relative;z-index:1;}
-
-/* HERO */
-.hero{
-  text-align:center;
-  margin-bottom:60px;
-}
-.hero span{
-  background:linear-gradient(45deg,var(--accent),var(--accent2));
-  -webkit-background-clip:text;
-  color:transparent;
+/* DARK MODE */
+body.dark {
+  background: #121212;
+  color: #eee;
 }
 
-/* CARD */
-.card{
-  background:var(--card);
-  padding:20px;
-  border-radius:10px;
-  border:1px solid var(--border);
-  transition:0.4s;
-}
-.card:hover{
-  transform:translateY(-5px);
-  border-color:var(--accent);
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:14px;
+/* =========================
+   NAVIGATION
+========================= */
+nav {
+  background: #2c3e50;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1000;
 }
 
-/* TABLE */
-table{
-  width:100%;
-  border-collapse:collapse;
-}
-th,td{
-  padding:11px;
-  border:1px solid var(--border);
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* FORM */
-.contact-form{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-.contact-form input,
-.contact-form textarea{
-  padding:12px;
-  border-radius:8px;
-  border:1px solid var(--border);
-  background:var(--card);
-  color:var(--text);
-}
-.contact-form button{
-  background:linear-gradient(45deg,var(--accent),var(--accent2));
-  border:none;
-  padding:12px;
-  cursor:pointer;
-}
-.contact-form button:hover{
-  transform:translateY(-2px);
+nav a:hover {
+  color: #00d4ff;
 }
 
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
+/* ACTIVE NAV */
+.active {
+  color: #00d4ff !important;
 }
 
-/* SMOOTH SCROLL */
-html{
-  scroll-behavior:smooth;
+/* =========================
+   SECTIONS
+========================= */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* =========================
+   TABLE
+========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #aaa;
+}
+
+th {
+  background: #2c3e50;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  background: #2c3e50;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #00aaff;
+}
+
+/* =========================
+   SKILLS + INTERESTS CARDS
+========================= */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* CARD STYLE */
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-6px);
+  background: #eaf3ff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* DARK MODE CARDS */
+body.dark .card {
+  background: #1e293b;
+  color: #e5e7eb;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+}
+
+body.dark .card:hover {
+  background: #273449;
+}
+
+/* HIDDEN DETAILS STYLING */
+.card-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #555;
+  text-align: center;
+}
+
+body.dark .card-details {
+  color: #cbd5e1;
+}
+
+/* Class triggered via JS when card is clicked */
+.card.open .card-details {
+  max-height: 100px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+/* =========================
+   SCROLL TO TOP BUTTON
+========================= */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 99;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  outline: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 0;
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: #00aaff;
+  transform: translateY(-3px);
+}
+
+/* Dark mode overrides for the button */
+body.dark #scrollTopBtn {
+  background-color: #00aaff;
+  color: #121212;
+}
+
+body.dark #scrollTopBtn:hover {
+  background-color: #00d4ff;
 }

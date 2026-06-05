@@ -6,7 +6,8 @@
     <title>Eckhad</title>
     <link rel="stylesheet" href="../style/profile2.css"/>
 </head>
-<body id="body">
+<!-- FIX: id changed from "body" to "top" so the back-to-top link works -->
+<body id="top">
     <!-- This is a Navigation Bar to Access shortcuts to other pages -->
     <div class="nav-container">
         <nav>
@@ -18,32 +19,34 @@
     <div class="codes"><h2>Behind the Codes.</h2></div>
     <p>I am a passionate Tech enthusiast with a strong foundation in computer science and a keen interest in solving complex technical challenges.</p>
     <p>I'm where the money is.. Most lie about what got them into Tech but if i'm to level with you right now, i'm in it for the money.</p>
-    <div class="2"><p><strong>Delusional about Forbes 30 under 30!!</strong></p></div>
+    <!-- FIX: class "2" → "forbes" (class names cannot start with a digit) -->
+    <div class="forbes"><p><strong>Delusional about Forbes 30 under 30!!</strong></p></div>
     <h2><strong>Strengths:</strong></h2>
     <div class="strengths">
 
-       <div class="skill">
-        <h3>Skill 1: Professional Critical Thinking</h3>
-        <ul>
+        <div class="skill">
+            <h3>Skill 1: Professional Critical Thinking</h3>
+            <ul>
                 <li>Critical Thinking</li>
                 <li>Leadership</li>
             </ul>
         </div>
         <div class="skill">
-        <h3>Skill 2: Problem Solving</h3>
-        <ul>
+            <h3>Skill 2: Problem Solving</h3>
+            <ul>
                 <li>Sticking to personal protocol</li>
                 <li>Analytical Thinking</li>
-            </ul></div>
+            </ul>
+        </div>
         <div class="skill">
-        <h3>Skill 3: Infrastructure & Cloud</h3>
-        <ul>
+            <h3>Skill 3: Infrastructure & Cloud</h3>
+            <ul>
                 <li>Cloud Computing</li>
                 <li>Networking</li>
             </ul>
         </div>
         <div class="skill">
-        <h3>Skill 4: Web Development</h3>
+            <h3>Skill 4: Web Development</h3>
             <ul>
                 <li>HTML</li>
                 <li>CSS</li>
@@ -51,25 +54,28 @@
             </ul>
         </div>
         <div class="skill">
-        <h3>Skill 5: Programming Languages</h3>
+            <h3>Skill 5: Programming Languages</h3>
             <ul>
                 <li>C</li>
                 <li>Python</li>
             </ul>
         </div>
         <div class="skill">
-        <h3>Skill 6: Mathematics</h3>
+            <h3>Skill 6: Mathematics</h3>
             <ul>
                 <li>Probability</li>
                 <li>Sets and Logic</li>
             </ul>
         </div>
 
-    <!-- This is a table pertaing my education background -->
-    <h2><bold>Academic Base:</Base></h2>
+    </div><!-- FIX: closing </div> for .strengths was missing — table was nested inside it -->
+
+    <!-- This is a table pertaining my education background -->
+    <!-- FIX: <bold> and </Base> replaced with <strong> -->
+    <h2><strong>Academic Base:</strong></h2>
     <table border="2">
         <tr>
-            <th> Educational Level</th>
+            <th>Educational Level</th>
             <th>School</th>
             <th>Years</th>
         </tr>
@@ -79,57 +85,67 @@
             <td>2025-Present</td>
         </tr>
         <tr>
-            <td>Advanced Secondary Education </td>
+            <td>Advanced Secondary Education</td>
             <td>Pamoja High School</td>
             <td>2023-2025</td>
         </tr>
         <tr>
-            <td>Ordinary Secondary Education </td>
+            <td>Ordinary Secondary Education</td>
             <td>St.Maximilian Sec. Secondary School</td>
             <td>2019-2022</td>
         </tr>
         <tr>
-            <td>Primary School Education </td>
+            <td>Primary School Education</td>
             <td>Michael Mausa School</td>
             <td>2011-2018</td>
         </tr>
-
-
     </table>
-       <h3> I've swapped in between schools, but just so you know the listed are the ones i grduated in.</h3>
+    <h3>I've swapped in between schools, but just so you know the listed are the ones i graduated in.</h3>
+
     <h2>What gets me excited:</h2>
     <ul>
         <li><strong>Connecting dots:</strong> Being the guy for the work.</li>
         <li><strong>Doomscrolling and Netflix:</strong> The media needs users innit.</li>
-        <li><strong>Learning what can earn me:</strong> Proper at listerning and digesting mostly things that potentially add value to my bucket.</li>
+        <li><strong>Learning what can earn me:</strong> Proper at listening and digesting mostly things that potentially add value to my bucket.</li>
     </ul>
 
     <h2>I guess this is where you see me, bet.</h2>
-       <div class="Nowahalla"><table><th>No Wahalla my Ppl ....</th></table></div>
+    <div class="Nowahalla"><table><th>No Wahalla my Ppl ....</th></table></div>
 
     <div class="images">
         <div class="image1">
             <img src="../images/profile.jpeg" alt="profile Image">
         </div>
-        <div class="image2"> 
+        <div class="image2">
             <img src="../images/respective.jpeg" alt="respective Image">
         </div>
     </div>
 
     <h2>Favorite Links</h2>
     <ul>
-      <li><bold>Visit my personal blog:</bold>
+        <!-- FIX: <bold> is not a real tag, replaced with <strong> throughout -->
+        <li><strong>Visit my personal blog:</strong>
             <a href="https://eckhadmisigaro.blogspot.com/" target="_blank"><strong>My Personal Blog</strong></a></li>
-        <li><bold>Connect with me on LinkedIn:</bold>
+        <li><strong>Connect with me on LinkedIn:</strong>
             <a href="https://www.linkedin.com/in/eckhad-misigaro-6xkbr6tn5f-wq/" target="_blank"><strong>My LinkedIn Profile</strong></a></li>
-         <li><bold>Follow me on Twitter:</bold>
+        <li><strong>Follow me on Twitter:</strong>
             <a href="https://twitter.com/EckhadMisigaro" target="_blank"><strong>My Twitter Profile</strong></a></li>
-         <li><bold>Explore my projects on GitHub:</bold>
+        <li><strong>Explore my projects on GitHub:</strong>
             <a href="https://github.com/6xkbr6tn5f-wq" target="_blank"><strong>My GitHub Projects</strong></a></li>
     </ul>
-    <p><strong>This is scripted but the essence to it is exceptional, take my word for it.</strong></p>
-    <p>Back to <a href = "#top">top</a></p>
+
+    <!-- FIX: was missing </tr></table> before </div> -->
+    <div class="Yalla">
+        <table>
+            <tr>
+                <td>
+                    <p><strong>This is scripted but the essence to it is exceptional, take my word for it.</strong></p>
+                    <p>Back to <a href="#top">top</a></p>
+                </td>
+            </tr>
+        </table>
+    </div>
 
     <script src="../scripts/profile2-eckhad.js" defer></script>
-    </body>
+</body>
 </html>
