@@ -59,27 +59,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 3. HOBBIES SECTION: READ MORE / READ LESS
-    function initHobbiesToggle() {
-        const hobbyTexts = document.querySelectorAll(".hobby-description");
+  function initHobbiesToggle() {
+    const hobbyItems = document.querySelectorAll(".hobby-item");
+
+    hobbyItems.forEach(item => {
+        const desc = item.querySelector(".hobby-description");
         
-        hobbyTexts.forEach(desc => {
-            desc.classList.add("hobby-collapsed");
-            
-            // Create a custom toggle trigger anchor below description
-            const toggleLink = document.createElement("a");
-            toggleLink.innerText = "Read More";
-            toggleLink.href = "#";
-            toggleLink.className = "hobby-toggle";
-            
-            desc.parentNode.insertBefore(toggleLink, desc.nextSibling);
-            
-            toggleLink.addEventListener("click", (e) => {
-                e.preventDefault();
-                const isCollapsed = desc.classList.toggle("hobby-collapsed");
-                toggleLink.innerText = isCollapsed ? "Read More" : "Read Less";
-            });
+        if (!desc || item.querySelector(".hobby-toggle")) return; 
+
+        desc.classList.add("hobby-collapsed");
+        
+        const toggleBtn = document.createElement("span");
+        toggleBtn.className = "hobby-toggle";
+        toggleBtn.innerText = "Read More";
+        
+        desc.after(toggleBtn);
+        
+        // Use addEventListener for guaranteed execution
+        toggleBtn.addEventListener("click", () => {
+            const isCollapsed = desc.classList.toggle("hobby-collapsed");
+            toggleBtn.innerText = isCollapsed ? "Read More" : "Read Less";
         });
-    }
+    });
+}
+
+initHobbiesToggle();
+  
 
     // 4. IMAGE SECTION: LIGHTBOX OVERLAY
     function initLightbox() {
