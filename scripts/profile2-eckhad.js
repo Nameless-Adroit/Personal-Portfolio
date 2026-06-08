@@ -1,14 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-   
     // 1. SKILLS SECTION: SHOW/HIDE DETAILS PARAGRAPH
-    //
-
     function initSkillsToggle() {
         const skillCards = document.querySelectorAll(".skill");
         
         skillCards.forEach(card => {
-            // Assumes each card has an element with class '.details' inside it
             const details = card.querySelector(".details");
             if (!details) return;
             
@@ -25,10 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 2. EDUCATION TABLE: JS-POWERED SORT BUTTON
-    //
-
     function initTableSort() {
-        const table = document.querySelector("table");
+        const table = document.querySelector("#education-table");
         if (!table) return;
 
         // Create the sort button dynamically and insert it near the table
@@ -41,19 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         sortBtn.addEventListener("click", () => {
             const tbody = table.querySelector("tbody") || table;
-            // Target rows (skipping header row <tr> if inside main table structure)
-            const rows = Array.from(tbody.querySelectorAll("tr")).filter(row => !row.querySelector("th"));
+            const rows = Array.from(tbody.querySelectorAll("tr"));
             
-            // Find the index of the Year column (assuming it's named 'Year')
+            // Find the index of the Year column
             const headers = Array.from(table.querySelectorAll("th"));
             const yearColumnIndex = headers.findIndex(th => th.innerText.toLowerCase().includes("year"));
-            
-            // Default fallback to index 0 if no clear matching <th> is present
-            const targetIndex = yearColumnIndex !== -1 ? yearColumnIndex : 0;
+            const targetIndex = yearColumnIndex !== -1 ? yearColumnIndex : 2;
 
             rows.sort((rowA, rowB) => {
-                const cellA = rowA.cells[targetIndex].innerText.trim();
-                const cellB = rowB.cells[targetIndex].innerText.trim();
+                const cellA = parseInt(rowA.cells[targetIndex].innerText.trim(), 10) || 0;
+                const cellB = parseInt(rowB.cells[targetIndex].innerText.trim(), 10) || 0;
                 
                 return ascending ? cellA - cellB : cellB - cellA;
             });
@@ -62,16 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
             rows.forEach(row => tbody.appendChild(row));
             
             // Flip ordering toggle state
+            sortBtn.innerText = `Sort by Year (${ascending ? "Desc" : "Asc"})`;
             ascending = !ascending;
-            sortBtn.innerText = `Sort by Year (${ascending ? "Asc" : "Desc"})`;
         });
     }
 
-
-    // 3. HOBBIES SECTION: READ MORE / READ LESS //
-
+    // 3. HOBBIES SECTION: READ MORE / READ LESS
     function initHobbiesToggle() {
-        // Target paragraphs inside element containing hobbies configuration
         const hobbyTexts = document.querySelectorAll(".hobby-description");
         
         hobbyTexts.forEach(desc => {
@@ -93,10 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-  
     // 4. IMAGE SECTION: LIGHTBOX OVERLAY
-    //
-
     function initLightbox() {
         const images = document.querySelectorAll(".image1 img, .image2 img");
         if(images.length === 0) return;
@@ -129,10 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
- 
     // 5. NAVIGATION: SCROLL-TO-TOP BUTTON
-    //
-
     function initScrollToTop() {
         const topBtn = document.createElement("button");
         topBtn.innerText = "▲ Top";
@@ -156,10 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 6. DARK / LIGHT MODE TOGGLE (BODY CLASS TARGET)
-    //
-
     function initThemeToggle() {
-        // Appending directly onto document body structure or header row matching requirements
         const header = document.querySelector(".nav-container") || document.body;
         
         const toggleBtn = document.createElement("button");

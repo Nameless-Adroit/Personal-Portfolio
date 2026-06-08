@@ -1,50 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html id="top">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eckhad</title>
     <link rel="stylesheet" href="../style/profile2.css"/>
 </head>
-<!-- FIX: id changed from "body" to "top" so the back-to-top link works -->
-<body id="top">
-    <!-- This is a Navigation Bar to Access shortcuts to other pages -->
+<body id="body">
+    
     <div class="nav-container">
         <nav>
-            <a href="../index.html">Home</a> <br>
+            <a href="../index.html">Home</a>
         </nav>
     </div>
 
     <h1>Eckhad Misigaro | Unveiled Tech Billionaire.</h1>
     <div class="codes"><h2>Behind the Codes.</h2></div>
+    
     <p>I am a passionate Tech enthusiast with a strong foundation in computer science and a keen interest in solving complex technical challenges.</p>
     <p>I'm where the money is.. Most lie about what got them into Tech but if i'm to level with you right now, i'm in it for the money.</p>
-    <!-- FIX: class "2" → "forbes" (class names cannot start with a digit) -->
-    <div class="forbes"><p><strong>Delusional about Forbes 30 under 30!!</strong></p></div>
+    <div class="forbes-tag"><p><strong>Delusional about Forbes 30 under 30!!</strong></p></div>
+    
     <h2><strong>Strengths:</strong></h2>
     <div class="strengths">
-
         <div class="skill">
             <h3>Skill 1: Professional Critical Thinking</h3>
             <ul>
                 <li>Critical Thinking</li>
                 <li>Leadership</li>
             </ul>
+            <p class="details">Applying logical structures to solve high-pressure technical roadblocks systematically.</p>
         </div>
+        
         <div class="skill">
             <h3>Skill 2: Problem Solving</h3>
             <ul>
                 <li>Sticking to personal protocol</li>
                 <li>Analytical Thinking</li>
             </ul>
+            <p class="details">Breaking down core operational bugs and ensuring code execution adheres to strict optimization logic.</p>
         </div>
+        
         <div class="skill">
             <h3>Skill 3: Infrastructure & Cloud</h3>
             <ul>
                 <li>Cloud Computing</li>
                 <li>Networking</li>
             </ul>
+            <p class="details">Deploying scalable architectures and configuring virtualization environments securely.</p>
         </div>
+        
         <div class="skill">
             <h3>Skill 4: Web Development</h3>
             <ul>
@@ -52,89 +57,102 @@
                 <li>CSS</li>
                 <li>Front-End Development</li>
             </ul>
+            <p class="details">Building high-fidelity, adaptive interfaces with complex dynamic scripting enhancements.</p>
         </div>
+        
         <div class="skill">
             <h3>Skill 5: Programming Languages</h3>
             <ul>
                 <li>C</li>
                 <li>Python</li>
             </ul>
+            <p class="details">Developing low-level optimization algorithms and scripts for automated data engineering.</p>
         </div>
+        
         <div class="skill">
             <h3>Skill 6: Mathematics</h3>
             <ul>
                 <li>Probability</li>
                 <li>Sets and Logic</li>
             </ul>
+            <p class="details">Leveraging structural discrete math principles to evaluate computation complexity and data sets.</p>
         </div>
+    </div>
 
-    </div><!-- FIX: closing </div> for .strengths was missing — table was nested inside it -->
-
-    <!-- This is a table pertaining my education background -->
-    <!-- FIX: <bold> and </Base> replaced with <strong> -->
     <h2><strong>Academic Base:</strong></h2>
-    <table border="2">
-        <tr>
-            <th>Educational Level</th>
-            <th>School</th>
-            <th>Years</th>
-        </tr>
-        <tr>
-            <td>BSc in Computer Science</td>
-            <td>University Of Dar es Salaam</td>
-            <td>2025-Present</td>
-        </tr>
-        <tr>
-            <td>Advanced Secondary Education</td>
-            <td>Pamoja High School</td>
-            <td>2023-2025</td>
-        </tr>
-        <tr>
-            <td>Ordinary Secondary Education</td>
-            <td>St.Maximilian Sec. Secondary School</td>
-            <td>2019-2022</td>
-        </tr>
-        <tr>
-            <td>Primary School Education</td>
-            <td>Michael Mausa School</td>
-            <td>2011-2018</td>
-        </tr>
+    <table border="2" id="education-table">
+        <thead>
+            <tr>
+                <th>Educational Level</th>
+                <th>School</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>BSc in Computer Science</td>
+                <td>University Of Dar es Salaam</td>
+                <td>2025</td>
+            </tr>
+            <tr>
+                <td>Advanced Secondary Education</td>
+                <td>Pamoja High School</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Ordinary Secondary Education</td>
+                <td>St.Maximilian Sec. Secondary School</td>
+                <td>2019</td>
+            </tr>
+            <tr>
+                <td>Primary School Education</td>
+                <td>Michael Mausa School</td>
+                <td>2011</td>
+            </tr>
+        </tbody>
     </table>
     <h3>I've swapped in between schools, but just so you know the listed are the ones i graduated in.</h3>
 
     <h2>What gets me excited:</h2>
-    <ul>
-        <li><strong>Connecting dots:</strong> Being the guy for the work.</li>
-        <li><strong>Doomscrolling and Netflix:</strong> The media needs users innit.</li>
-        <li><strong>Learning what can earn me:</strong> Proper at listening and digesting mostly things that potentially add value to my bucket.</li>
-    </ul>
+    <div class="hobbies-section">
+        <div class="hobby-item">
+            <strong>Connecting dots:</strong>
+            <p class="hobby-description">Being the absolute go-to guy for structural engineering work. Analyzing broken pieces of complex logic and assembling them back together cleanly where efficiency matters most.</p>
+        </div>
+        <div class="hobby-item">
+            <strong>Doomscrolling and Netflix:</strong>
+            <p class="hobby-description">The modern media framework requires active daily users innit. Keeping up with streaming content rhythms, pop-culture technological shifts, and algorithmic trends across global platforms.</p>
+        </div>
+        <div class="hobby-item">
+            <strong>Learning what can earn me:</strong>
+            <p class="hobby-description">Proper at listening and digesting mostly things that potentially add financial value to my bucket. Constantly tracking emerging markets and high-yield technological asset stacks.</p>
+        </div>
+    </div>
 
     <h2>I guess this is where you see me, bet.</h2>
-    <div class="Nowahalla"><table><th>No Wahalla my Ppl ....</th></table></div>
+    <div class="Nowahalla">
+        <table>
+            <tr><th>No Wahalla my Ppl ....</th></tr>
+        </table>
+    </div>
 
     <div class="images">
         <div class="image1">
             <img src="../images/profile.jpeg" alt="profile Image">
         </div>
-        <div class="image2">
+        <div class="image2"> 
             <img src="../images/respective.jpeg" alt="respective Image">
         </div>
     </div>
 
     <h2>Favorite Links</h2>
     <ul>
-        <!-- FIX: <bold> is not a real tag, replaced with <strong> throughout -->
-        <li><strong>Visit my personal blog:</strong>
-            <a href="https://eckhadmisigaro.blogspot.com/" target="_blank"><strong>My Personal Blog</strong></a></li>
-        <li><strong>Connect with me on LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/eckhad-misigaro-6xkbr6tn5f-wq/" target="_blank"><strong>My LinkedIn Profile</strong></a></li>
-        <li><strong>Follow me on Twitter:</strong>
-            <a href="https://twitter.com/EckhadMisigaro" target="_blank"><strong>My Twitter Profile</strong></a></li>
-        <li><strong>Explore my projects on GitHub:</strong>
-            <a href="https://github.com/6xkbr6tn5f-wq" target="_blank"><strong>My GitHub Projects</strong></a></li>
+        <li><strong>Visit my personal blog:</strong> <a href="https://eckhadmisigaro.blogspot.com/" target="_blank">My Personal Blog</a></li>
+        <li><strong>Connect with me on LinkedIn:</strong> <a href="https://www.linkedin.com/in/eckhad-misigaro-6xkbr6tn5f-wq/" target="_blank">My LinkedIn Profile</a></li>
+        <li><strong>Follow me on Twitter:</strong> <a href="https://twitter.com/EckhadMisigaro" target="_blank">My Twitter Profile</a></li>
+        <li><strong>Explore my projects on GitHub:</strong> <a href="https://github.com/6xkbr6tn5f-wq" target="_blank">My GitHub Projects</a></li>
     </ul>
 
-    <!-- FIX: was missing </tr></table> before </div> -->
     <div class="Yalla">
         <table>
             <tr>
